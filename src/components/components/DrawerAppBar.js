@@ -18,7 +18,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Container } from "@mui/material";
 //Routes
-import { routes } from "./config/routes";
+import { routes } from "../config/routes";
 
 const drawerWidth = 240;
 
@@ -38,9 +38,15 @@ function DrawerAppBar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
+      <Button
+        onClick={(e) => {
+          handleNavigationClicked(e, { url: "" });
+        }}
+      >
+        <Typography variant="h6" sx={{ my: 2, color: "white" }}>
+          MUI
+        </Typography>
+      </Button>
       <Divider />
       <List>
         {routes.map((route) => (
@@ -73,28 +79,45 @@ function DrawerAppBar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ display: { xs: "none", sm: "none", md: "block" } }}
-          >
-            MUI
-          </Typography>
+
           <Container>
             <Box
               sx={{
-                display: { xs: "none", sm: "none", md: "block" },
-                alignContent: "center",
-                textAlign: "center",
+                display: { xs: "none", sm: "none", md: "flex" },
+
+                alignItems: "center", // Align items vertically in the center
+                justifyContent: "space-between", // Distribute space between items
               }}
             >
+              <Button
+                textAlign="left"
+                onClick={(e) => {
+                  handleNavigationClicked(e, { url: "" });
+                }}
+              >
+                <Typography
+                  variant="h6"
+                  component="div"
+                  sx={{
+                    display: {
+                      xs: "none",
+                      sm: "none",
+                      md: "block",
+                      color: "white",
+                    },
+                  }}
+                >
+                  MUI
+                </Typography>
+              </Button>
               {routes.map((route) => (
                 <Button
                   key={route.url}
                   sx={{
                     color: "#fff",
-                    marginLeft: "8px",
-                    marginRight: "8px",
+                    marginLeft: "4px",
+                    marginRight: "4px",
+                    fontSize: "14px",
                   }}
                   onClick={(e) => handleNavigationClicked(e, route)}
                 >

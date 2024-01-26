@@ -8,7 +8,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 // Custom Theme
 import { theme } from "./components/store/ThemeProvider";
 //Components
-import DrawerAppBar from "./components/DrawerAppBar";
+import PageLayout from "./components/pages/PageLayout";
 
 import NotFound from "./components/pages/NotFound/NotFound";
 
@@ -19,20 +19,22 @@ function App() {
       <CssBaseline />
       <ThemeProvider theme={theme}>
         <BrowserRouter>
-          <DrawerAppBar />
-          <Container maxWidth="lg">
-            <Paper sx={{ minHeight: "93vh" }}>
+          <PageLayout>
+            <Container maxWidth="lg">
               <Routes>
-                {routes.map((route) => {
+                {routes.map((route, index) => {
                   return (
-                    <Route path={`${route.url}`} element={route.component} />
+                    <Route
+                      key={`${route.name}-${index}`}
+                      path={`${route.url}`}
+                      element={route.component}
+                    />
                   );
                 })}
                 <Route path="*" element={<NotFound />} />;
               </Routes>
-            </Paper>
-          </Container>
-
+            </Container>
+          </PageLayout>
           {/* The rest of your application */}
         </BrowserRouter>
       </ThemeProvider>
