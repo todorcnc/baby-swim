@@ -17,16 +17,10 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Container } from "@mui/material";
+//Routes
+import { routes } from "./config/routes";
 
 const drawerWidth = 240;
-const navItems = [
-  { name: "За нас", url: "about" },
-  { name: "Курсове", url: "courses" },
-  { name: "Ивенти", url: "events" },
-  { name: "Галерия", url: "gallery" },
-  { name: "Аксесояри за плуване", url: "accessories" },
-  { name: "Контакти", url: "contacts" },
-];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -38,9 +32,8 @@ function DrawerAppBar(props) {
     setMobileOpen((prevState) => !prevState);
   };
 
-  const handleNavigationClicked = (e, item) => {
-    console.log(item);
-    navigate(item.url);
+  const handleNavigationClicked = (e, route) => {
+    navigate(route.url);
   };
 
   const drawer = (
@@ -50,13 +43,13 @@ function DrawerAppBar(props) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item.url}>
+        {routes.map((route) => (
+          <ListItem key={route.url}>
             <ListItemButton
               sx={{ textAlign: "center" }}
-              onClick={(e) => handleNavigationClicked(e, item)}
+              onClick={(e) => handleNavigationClicked(e, route)}
             >
-              <ListItemText primary={item.name} />
+              <ListItemText primary={route.label} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -95,17 +88,17 @@ function DrawerAppBar(props) {
                 textAlign: "center",
               }}
             >
-              {navItems.map((item) => (
+              {routes.map((route) => (
                 <Button
-                  key={item.url}
+                  key={route.url}
                   sx={{
                     color: "#fff",
                     marginLeft: "8px",
                     marginRight: "8px",
                   }}
-                  onClick={(e) => handleNavigationClicked(e, item)}
+                  onClick={(e) => handleNavigationClicked(e, route)}
                 >
-                  {item.name}
+                  {route.label}
                 </Button>
               ))}
             </Box>
