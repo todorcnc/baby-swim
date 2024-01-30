@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/baby-swim/static/css/main.22a6293d.css",
-    "main.js": "/baby-swim/static/js/main.266823d5.js",
+    "main.js": "/baby-swim/static/js/main.fbfbf3b3.js",
     "static/js/787.ac696a6a.chunk.js": "/baby-swim/static/js/787.ac696a6a.chunk.js",
     "static/media/baby.jpg": "/baby-swim/static/media/baby.8e4728e70e277a0382e9.jpg",
     "static/media/1_web.webp": "/baby-swim/static/media/1_web.969ff572c6a6ba2174ab.webp",
@@ -18,11 +18,11 @@
     "static/media/6.png": "/baby-swim/static/media/6.17939df3db9948b83499.png",
     "index.html": "/baby-swim/index.html",
     "main.22a6293d.css.map": "/baby-swim/static/css/main.22a6293d.css.map",
-    "main.266823d5.js.map": "/baby-swim/static/js/main.266823d5.js.map",
+    "main.fbfbf3b3.js.map": "/baby-swim/static/js/main.fbfbf3b3.js.map",
     "787.ac696a6a.chunk.js.map": "/baby-swim/static/js/787.ac696a6a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.22a6293d.css",
-    "static/js/main.266823d5.js"
+    "static/js/main.fbfbf3b3.js"
   ]
 }
