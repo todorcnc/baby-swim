@@ -17,6 +17,15 @@ import {
 
 import { prices } from "../../config/prices";
 
+import Title from "../../components/TItle";
+
+import imgLeftSectionOne from "../../../assets/pictures/dolphins/2R.png";
+import imgRightSectionOne from "../../../assets/pictures/dolphins/5.png";
+import imgLeftSectionTwo from "../../../assets/pictures/dolphins/4R.png";
+import imgRightSectionTwo from "../../../assets/pictures/dolphins/1.png";
+import imgLeftSectionThree from "../../../assets/pictures/dolphins/3R.png";
+import imgRightSectionThree from "../../../assets/pictures/dolphins/6.png";
+
 import babyImag from "./baby.jpg";
 
 function Courses() {
@@ -24,9 +33,11 @@ function Courses() {
     <>
       <Paper sx={{ mt: 4, overflow: "auto" }}>
         <Box sx={{ flexGrow: 1, p: 2 }}>
-          <Typography textAlign={"center"} variant="h4">
-            График
-          </Typography>
+          <Title
+            imgLeft={imgLeftSectionOne}
+            title={"График"}
+            imgRight={imgRightSectionOne}
+          />
           <Divider sx={{ pt: 2, mb: 2 }} />
           <Table aria-label="simple table">
             <TableHead>
@@ -53,9 +64,11 @@ function Courses() {
 
       <Paper sx={{ mt: 4, overflow: "auto" }}>
         <Box sx={{ flexGrow: 1, p: 2 }}>
-          <Typography textAlign={"center"} variant="h4">
-            Ценоразпис
-          </Typography>
+          <Title
+            imgLeft={imgLeftSectionTwo}
+            title={"Ценоразпис"}
+            imgRight={imgRightSectionTwo}
+          />
           <Divider sx={{ pt: 2, mb: 2 }} />
           <Table aria-label="simple table">
             <TableHead>
@@ -82,12 +95,15 @@ function Courses() {
 
       <Paper sx={{ mt: 3 }}>
         <Box sx={{ flexGrow: 1, p: 2 }}>
-          <Typography textAlign={"center"} variant="h4">
-            Информация за видовете групи
-          </Typography>
+          <Title
+            imgLeft={imgLeftSectionThree}
+            title={"Информация за видовете групи"}
+            imgRight={imgRightSectionThree}
+          />
+
           <Divider sx={{ pt: 2, mb: 2 }} />
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
+          <Grid container spacing={2} sx={{ pb: 2 }}>
+            <Grid item xs={12} sm={12} md={6} lg={5} xl={5}>
               <Card sx={{ height: "100%" }}>
                 <CardMedia
                   component="img"
@@ -115,7 +131,7 @@ function Courses() {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
+            <Grid item xs={12} sm={12} md={6} lg={7} xl={7}>
               <Card sx={{ height: "100%" }}>
                 <CardMedia
                   component="img"
@@ -150,6 +166,8 @@ function Courses() {
                 </CardContent>
               </Card>
             </Grid>
+          </Grid>
+          <Grid container spacing={2}>
             <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
               <Card sx={{ height: "100%" }}>
                 <CardMedia
@@ -219,25 +237,6 @@ function Courses() {
               </Card>
             </Grid>
 
-            {/* Fake One */}
-            <Grid
-              item
-              xs={12}
-              sm={12}
-              md={4}
-              lg={4}
-              xl={4}
-              sx={{
-                display: {
-                  xs: "none",
-                  sm: "none",
-                  md: "block",
-                  color: "white",
-                },
-              }}
-            >
-              <Card elevation={0} sx={{ height: "100%" }}></Card>
-            </Grid>
             <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
               <Card sx={{ height: "100%" }}>
                 <CardMedia

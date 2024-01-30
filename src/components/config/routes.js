@@ -22,7 +22,7 @@ export const routes = [
   { name: "gallery", label: "Галерия", url: "gallery", component: <Gallery /> },
   {
     name: "accessories",
-    label: "Аксесояри за плуване",
+    label: "Аксесоари за плуване",
     url: "accessories",
     component: <Accessories />,
   },

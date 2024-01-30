@@ -18,15 +18,22 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Container } from "@mui/material";
 //Routes
+import { useLocation } from "react-router-dom";
 import { routes } from "../config/routes";
+// Logo
+import BabySwimLogo from "./BabySwimLogo";
 
 const drawerWidth = 240;
 
 function DrawerAppBar(props) {
   const { window } = props;
+  const location = useLocation();
   const navigate = useNavigate();
 
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [currentSelection, setCurrentSelections] = React.useState(
+    location.pathname.substring(1)
+  );
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -34,6 +41,7 @@ function DrawerAppBar(props) {
 
   const handleNavigationClicked = (e, route) => {
     navigate(route.url);
+    setCurrentSelections(route.url);
   };
 
   const drawer = (
@@ -43,8 +51,8 @@ function DrawerAppBar(props) {
           handleNavigationClicked(e, { url: "" });
         }}
       >
-        <Typography variant="h6" sx={{ my: 2, color: "white" }}>
-          MUI
+        <Typography variant="h6" sx={{ my: 2 }}>
+          <BabySwimLogo />
         </Typography>
       </Button>
       <Divider />
@@ -75,7 +83,7 @@ function DrawerAppBar(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { md: "none" } }}
+            sx={{ mr: 2, display: { md: "none" }, color: "white" }}
           >
             <MenuIcon />
           </IconButton>
@@ -90,25 +98,11 @@ function DrawerAppBar(props) {
               }}
             >
               <Button
-                textAlign="left"
                 onClick={(e) => {
                   handleNavigationClicked(e, { url: "" });
                 }}
               >
-                <Typography
-                  variant="h6"
-                  component="div"
-                  sx={{
-                    display: {
-                      xs: "none",
-                      sm: "none",
-                      md: "block",
-                      color: "white",
-                    },
-                  }}
-                >
-                  MUI
-                </Typography>
+                <BabySwimLogo />
               </Button>
               {routes.map((route) => (
                 <Button
@@ -118,6 +112,11 @@ function DrawerAppBar(props) {
                     marginLeft: "4px",
                     marginRight: "4px",
                     fontSize: "14px",
+                    borderRadius: "0px",
+                    ...((route.url === currentSelection) &
+                      (route.url !== "") && {
+                      borderBottom: "2px solid white",
+                    }),
                   }}
                   onClick={(e) => handleNavigationClicked(e, route)}
                 >

@@ -2,14 +2,23 @@ import React from "react";
 
 import { Paper, Box, Typography, Divider } from "@mui/material";
 
+import Title from "../../components/TItle";
+
+import imgLeftSectionOne from "../../../assets/pictures/dolphins/4R.png";
+import imgRightSectionOne from "../../../assets/pictures/dolphins/1.png";
+import imgLeftSectionTwo from "../../../assets/pictures/dolphins/3R.png";
+import imgRightSectionTwo from "../../../assets/pictures/dolphins/6.png";
+
 function Home() {
   return (
     <>
       <Paper sx={{ mt: 3 }}>
         <Box sx={{ flexGrow: 1, p: 2 }}>
-          <Typography textAlign={"center"} variant="h4">
-            Елате да плуваме и да се забавляваме заедно!
-          </Typography>
+          <Title
+            imgLeft={imgLeftSectionOne}
+            title={"Елате да поплуваме и да се позабавляваме заедно!"}
+            imgRight={imgRightSectionOne}
+          />
 
           <Divider sx={{ pt: 2 }} />
           <Typography
@@ -34,9 +43,11 @@ function Home() {
       </Paper>
       <Paper sx={{ mt: 3 }}>
         <Box sx={{ flexGrow: 1, p: 2 }}>
-          <Typography textAlign={"center"} variant="h4">
-            Защо плуване от ранна детска възраст?
-          </Typography>
+          <Title
+            imgLeft={imgLeftSectionTwo}
+            title={"Защо плуване от ранна детска възраст?"}
+            imgRight={imgRightSectionTwo}
+          />
 
           <Divider sx={{ pt: 2 }} />
           <Typography
