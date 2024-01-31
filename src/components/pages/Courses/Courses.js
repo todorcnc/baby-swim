@@ -13,9 +13,11 @@ import {
   Card,
   CardContent,
   CardMedia,
+  Stack,
 } from "@mui/material";
 
 import { prices } from "../../config/prices";
+import { scheduler } from "../../config/scheduler";
 
 import Title from "../../components/TItle";
 
@@ -31,6 +33,7 @@ import babyImag from "./baby.jpg";
 function Courses() {
   return (
     <>
+      {/* Scheduler */}
       <Paper sx={{ mt: 4, overflow: "auto" }}>
         <Box sx={{ flexGrow: 1, p: 2 }}>
           <Title
@@ -42,26 +45,217 @@ function Courses() {
           <Table aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell>Група</TableCell>
-                <TableCell>1 Посещение</TableCell>
-                <TableCell>4 Посещения/месец</TableCell>
-                <TableCell>8 Посещения/месец</TableCell>
+                <TableCell>Ден/Час</TableCell>
+                <TableCell>9:30</TableCell>
+                <TableCell>10:15</TableCell>
+                <TableCell>11:00</TableCell>
+                <TableCell>11:45</TableCell>
+                <TableCell>12:30</TableCell>
+                <TableCell>13:15</TableCell>
+                <TableCell>15:00</TableCell>
+                <TableCell>16:30</TableCell>
+                <TableCell>17:00</TableCell>
+                <TableCell>17:45</TableCell>
+                <TableCell>18:30</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
-              {prices.map((row, index) => (
+              {scheduler.map((row, index) => (
                 <TableRow key={index}>
-                  <TableCell>{`${row.label} лв.`}</TableCell>
-                  <TableCell>{`${row.singleLesson} лв.`}</TableCell>
-                  <TableCell>{`${row.fourLessonsPerMonth} лв.`}</TableCell>
-                  <TableCell>{`${row.eightLessonsPerMonth} лв.`}</TableCell>
+                  <TableCell padding="none">{`${row.day}`}</TableCell>
+                  <TableCell padding="none">
+                    <Stack direction={"column"}>
+                      {row.column_1.icon && (
+                        <>
+                          <img
+                            src={row.column_1.icon}
+                            alt=""
+                            style={{ maxWidth: 45 }}
+                            draggable={false}
+                          />
+                          <Typography sx={{ p: 0 }}>
+                            {row.column_1.teacher}
+                          </Typography>
+                        </>
+                      )}
+                    </Stack>
+                  </TableCell>
+                  <TableCell padding="none">
+                    <Stack direction={"column"}>
+                      {row.column_2.icon && (
+                        <>
+                          <img
+                            src={row.column_2.icon}
+                            alt=""
+                            style={{ maxWidth: 45 }}
+                            draggable={false}
+                          />
+                          <Typography sx={{ p: 0 }}>
+                            {row.column_2.teacher}
+                          </Typography>
+                        </>
+                      )}
+                    </Stack>
+                  </TableCell>
+                  <TableCell padding="none">
+                    <Stack direction={"column"}>
+                      {row.column_3.icon && (
+                        <>
+                          <img
+                            src={row.column_3.icon}
+                            alt=""
+                            style={{ maxWidth: 45 }}
+                            draggable={false}
+                          />
+                          <Typography sx={{ p: 0 }}>
+                            {row.column_3.teacher}
+                          </Typography>
+                        </>
+                      )}
+                    </Stack>
+                  </TableCell>
+                  <TableCell padding="none">
+                    <Stack direction={"column"}>
+                      {row.column_4.icon && (
+                        <>
+                          <img
+                            src={row.column_4.icon}
+                            alt=""
+                            style={{ maxWidth: 45 }}
+                            draggable={false}
+                          />
+                          <Typography sx={{ p: 0 }}>
+                            {row.column_4.teacher}
+                          </Typography>
+                        </>
+                      )}
+                    </Stack>
+                  </TableCell>
+                  <TableCell padding="none">
+                    <Stack direction={"column"}>
+                      {row.column_5.icon && (
+                        <>
+                          <img
+                            src={row.column_5.icon}
+                            alt=""
+                            style={{ maxWidth: 45 }}
+                            draggable={false}
+                          />
+                          <Typography sx={{ p: 0 }}>
+                            {row.column_5.teacher}
+                          </Typography>
+                        </>
+                      )}
+                    </Stack>
+                  </TableCell>
+                  <TableCell padding="none">
+                    <Stack direction={"column"}>
+                      {row.column_6.icon && (
+                        <>
+                          <img
+                            src={row.column_6.icon}
+                            alt=""
+                            style={{ maxWidth: 45 }}
+                            draggable={false}
+                          />
+                          <Typography sx={{ p: 0 }}>
+                            {row.column_6.teacher}
+                          </Typography>
+                        </>
+                      )}
+                    </Stack>
+                  </TableCell>
+                  <TableCell padding="none">
+                    <Stack direction={"column"}>
+                      {row.column_7.icon && (
+                        <>
+                          <img
+                            src={row.column_7.icon}
+                            alt=""
+                            style={{ maxWidth: 45 }}
+                            draggable={false}
+                          />
+                          <Typography sx={{ p: 0 }}>
+                            {row.column_7.teacher}
+                          </Typography>
+                        </>
+                      )}
+                    </Stack>
+                  </TableCell>
+                  <TableCell padding="none">
+                    <Stack direction={"column"}>
+                      {row.column_8.icon && (
+                        <>
+                          <img
+                            src={row.column_8.icon}
+                            alt=""
+                            style={{ maxWidth: 45 }}
+                            draggable={false}
+                          />
+                          <Typography sx={{ p: 0 }}>
+                            {row.column_8.teacher}
+                          </Typography>
+                        </>
+                      )}
+                    </Stack>
+                  </TableCell>
+                  <TableCell padding="none">
+                    <Stack direction={"column"}>
+                      {row.column_9.icon && (
+                        <>
+                          <img
+                            src={row.column_9.icon}
+                            alt=""
+                            style={{ maxWidth: 45 }}
+                            draggable={false}
+                          />
+                          <Typography sx={{ p: 0 }}>
+                            {row.column_9.teacher}
+                          </Typography>
+                        </>
+                      )}
+                    </Stack>
+                  </TableCell>
+                  <TableCell padding="none">
+                    <Stack direction={"column"}>
+                      {row.column_10.icon && (
+                        <>
+                          <img
+                            src={row.column_10.icon}
+                            alt=""
+                            style={{ maxWidth: 45 }}
+                            draggable={false}
+                          />
+                          <Typography sx={{ p: 0 }}>
+                            {row.column_10.teacher}
+                          </Typography>
+                        </>
+                      )}
+                    </Stack>
+                  </TableCell>
+                  <TableCell padding="none">
+                    <Stack direction={"column"}>
+                      {row.column_11.icon && (
+                        <>
+                          <img
+                            src={row.column_11.icon}
+                            alt=""
+                            style={{ maxWidth: 45 }}
+                            draggable={false}
+                          />
+                          <Typography sx={{ p: 0 }}>
+                            {row.column_11.teacher}
+                          </Typography>
+                        </>
+                      )}
+                    </Stack>
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>
           </Table>
         </Box>
       </Paper>
-
       <Paper sx={{ mt: 4, overflow: "auto" }}>
         <Box sx={{ flexGrow: 1, p: 2 }}>
           <Title
@@ -92,7 +286,6 @@ function Courses() {
           </Table>
         </Box>
       </Paper>
-
       <Paper sx={{ mt: 3 }}>
         <Box sx={{ flexGrow: 1, p: 2 }}>
           <Title
