@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/baby-swim/static/css/main.d42f2491.css",
-    "main.js": "/baby-swim/static/js/main.e931e001.js",
+    "main.js": "/baby-swim/static/js/main.3532a664.js",
     "static/js/787.ac696a6a.chunk.js": "/baby-swim/static/js/787.ac696a6a.chunk.js",
     "static/media/baby.jpg": "/baby-swim/static/media/baby.8e4728e70e277a0382e9.jpg",
     "static/media/1_web.webp": "/baby-swim/static/media/1_web.969ff572c6a6ba2174ab.webp",
@@ -11,18 +11,22 @@
     "static/media/5_web.webp": "/baby-swim/static/media/5_web.3943d3166ffb3a18f013.webp",
     "static/media/6.webp": "/baby-swim/static/media/6.d45b89067f21ea7d431b.webp",
     "static/media/2R.png": "/baby-swim/static/media/2R.6ca17dce7cbdef0fbc91.png",
+    "static/media/2.png": "/baby-swim/static/media/2.27f61f8b712f58c2c9f4.png",
     "static/media/3R.png": "/baby-swim/static/media/3R.d7e0899aa42f689d9da5.png",
     "static/media/1.png": "/baby-swim/static/media/1.9a3e3ba3671e7afa19d7.png",
+    "static/media/1R.png": "/baby-swim/static/media/1R.f721378d5fa0221dfe13.png",
+    "static/media/3.png": "/baby-swim/static/media/3.52e408b6c42315aa9870.png",
+    "static/media/4.png": "/baby-swim/static/media/4.97d09b81d583a7075e04.png",
     "static/media/4R.png": "/baby-swim/static/media/4R.0f4ac78dcf840b63e9fa.png",
     "static/media/6.png": "/baby-swim/static/media/6.c68c8ca5240b766a0698.png",
     "static/media/5.png": "/baby-swim/static/media/5.8c25a2db823afe9aeffa.png",
     "index.html": "/baby-swim/index.html",
     "main.d42f2491.css.map": "/baby-swim/static/css/main.d42f2491.css.map",
-    "main.e931e001.js.map": "/baby-swim/static/js/main.e931e001.js.map",
+    "main.3532a664.js.map": "/baby-swim/static/js/main.3532a664.js.map",
     "787.ac696a6a.chunk.js.map": "/baby-swim/static/js/787.ac696a6a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d42f2491.css",
-    "static/js/main.e931e001.js"
+    "static/js/main.3532a664.js"
   ]
 }
