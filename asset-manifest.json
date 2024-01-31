@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/baby-swim/static/css/main.d42f2491.css",
-    "main.js": "/baby-swim/static/js/main.f8b6daae.js",
+    "main.js": "/baby-swim/static/js/main.e931e001.js",
     "static/js/787.ac696a6a.chunk.js": "/baby-swim/static/js/787.ac696a6a.chunk.js",
     "static/media/baby.jpg": "/baby-swim/static/media/baby.8e4728e70e277a0382e9.jpg",
     "static/media/1_web.webp": "/baby-swim/static/media/1_web.969ff572c6a6ba2174ab.webp",
@@ -10,19 +10,19 @@
     "static/media/4.webp": "/baby-swim/static/media/4.aa3e54c33f9f31178efd.webp",
     "static/media/5_web.webp": "/baby-swim/static/media/5_web.3943d3166ffb3a18f013.webp",
     "static/media/6.webp": "/baby-swim/static/media/6.d45b89067f21ea7d431b.webp",
-    "static/media/2R.png": "/baby-swim/static/media/2R.abe052d42e41e4b11d60.png",
-    "static/media/3R.png": "/baby-swim/static/media/3R.261451216bc99f59c7ea.png",
-    "static/media/1.png": "/baby-swim/static/media/1.521f553db444fd4f0a55.png",
-    "static/media/4R.png": "/baby-swim/static/media/4R.f246fada8478f8e06e18.png",
-    "static/media/5.png": "/baby-swim/static/media/5.11ac4b6cb90b5a6978a0.png",
-    "static/media/6.png": "/baby-swim/static/media/6.17939df3db9948b83499.png",
+    "static/media/2R.png": "/baby-swim/static/media/2R.6ca17dce7cbdef0fbc91.png",
+    "static/media/3R.png": "/baby-swim/static/media/3R.d7e0899aa42f689d9da5.png",
+    "static/media/1.png": "/baby-swim/static/media/1.9a3e3ba3671e7afa19d7.png",
+    "static/media/4R.png": "/baby-swim/static/media/4R.0f4ac78dcf840b63e9fa.png",
+    "static/media/6.png": "/baby-swim/static/media/6.c68c8ca5240b766a0698.png",
+    "static/media/5.png": "/baby-swim/static/media/5.8c25a2db823afe9aeffa.png",
     "index.html": "/baby-swim/index.html",
     "main.d42f2491.css.map": "/baby-swim/static/css/main.d42f2491.css.map",
-    "main.f8b6daae.js.map": "/baby-swim/static/js/main.f8b6daae.js.map",
+    "main.e931e001.js.map": "/baby-swim/static/js/main.e931e001.js.map",
     "787.ac696a6a.chunk.js.map": "/baby-swim/static/js/787.ac696a6a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d42f2491.css",
-    "static/js/main.f8b6daae.js"
+    "static/js/main.e931e001.js"
   ]
 }
