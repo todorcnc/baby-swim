@@ -296,7 +296,7 @@ function Courses() {
 
           <Divider sx={{ pt: 2, mb: 2 }} />
           <Grid container spacing={2} sx={{ pb: 2 }}>
-            <Grid item xs={12} sm={12} md={6} lg={5} xl={5}>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
               <Card sx={{ height: "100%" }}>
                 <CardMedia
                   component="img"
@@ -324,7 +324,7 @@ function Courses() {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={7} xl={7}>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
               <Card sx={{ height: "100%" }}>
                 <CardMedia
                   component="img"
