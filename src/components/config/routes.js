@@ -9,7 +9,7 @@ import Events from "../pages/Events/Events";
 import Gallery from "../pages/Gallery/Gallery";
 
 export const routes = [
-  { name: "home", label: "", url: "", component: <Home /> },
+  { name: "home", label: "Начало", url: "", component: <Home /> },
   { name: "about", label: "За нас", url: "about", component: <About /> },
   {
     name: "courses",
@@ -18,7 +18,7 @@ export const routes = [
     url: "courses",
     component: <Courses />,
   },
-  { name: "events", label: "Ивенти", url: "events", component: <Events /> },
+  { name: "events", label: "Събития", url: "events", component: <Events /> },
   { name: "gallery", label: "Галерия", url: "gallery", component: <Gallery /> },
   {
     name: "accessories",

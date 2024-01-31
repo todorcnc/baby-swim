@@ -1,4 +1,7 @@
 import * as React from "react";
+
+import { isProduction } from "./AppConfig";
+
 // Routing
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { routes } from "./components/config/routes";
@@ -26,12 +29,16 @@ function App() {
                   return (
                     <Route
                       key={`${route.name}-${index}`}
-                      path={`${route.url}`}
+                      path={
+                        isProduction ? `baby-swim/${route.url}` : `${route.url}`
+                      }
                       element={route.component}
                     />
                   );
                 })}
-                <Route path="*" element={<NotFound />} />;
+                {isProduction ? null : (
+                  <Route path="*" element={<NotFound />} />
+                )}
               </Routes>
             </Container>
           </PageLayout>

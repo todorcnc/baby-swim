@@ -12,7 +12,7 @@ import imgRightSectionTwo from "../../../assets/pictures/dolphins/6.png";
 function Home() {
   return (
     <>
-      <Paper sx={{ mt: 3 }}>
+      <Box sx={{ mt: 3 }}>
         <Box sx={{ flexGrow: 1, p: 2 }}>
           <Title
             imgLeft={imgLeftSectionOne}
@@ -40,8 +40,8 @@ function Home() {
             и се наслаждават на миговете изпълнени с радост и щастие.
           </Typography>
         </Box>
-      </Paper>
-      <Paper sx={{ mt: 3 }}>
+      </Box>
+      <Box sx={{ mt: 3 }}>
         <Box sx={{ flexGrow: 1, p: 2 }}>
           <Title
             imgLeft={imgLeftSectionTwo}
@@ -73,7 +73,7 @@ function Home() {
             </ul>
           </Typography>
         </Box>
-      </Paper>
+      </Box>
     </>
   );
 }

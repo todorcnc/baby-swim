@@ -1,4 +1,5 @@
 import * as React from "react";
+import { isProduction } from "../../AppConfig";
 
 import { useNavigate } from "react-router-dom";
 
@@ -40,7 +41,12 @@ function DrawerAppBar(props) {
   };
 
   const handleNavigationClicked = (e, route) => {
-    navigate(route.url);
+    if (isProduction) {
+      navigate(`baby-swim/${route.url}`);
+      console.log(`baby-swim/${route.url}`);
+    } else {
+      navigate(route.url);
+    }
     setCurrentSelections(route.url);
   };
 
@@ -113,8 +119,7 @@ function DrawerAppBar(props) {
                     marginRight: "4px",
                     fontSize: "14px",
                     borderRadius: "0px",
-                    ...((route.url === currentSelection) &
-                      (route.url !== "") && {
+                    ...(route.url === currentSelection && {
                       borderBottom: "2px solid white",
                     }),
                   }}
